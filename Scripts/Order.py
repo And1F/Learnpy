@@ -84,13 +84,13 @@ def main():
     ordr = input("In what particluar order do you want to learn? \n 1 - First to Last \n 2 - Last to First \n 3 - Mixed \nPlease enter the desired Number: ")
     if ordr not in ["1", "2", "3"]: leave("Isches so schwer 1,2 oder 3 izgeh, du retard")
 
-    # First to Last
+    # First to Last / Last to First
     if ordr !="3":
+        ordr = 0 if ordr == "1" else -1
         for i in range(int(rep)):
             print(f"{i+1} session")            
             data = import_data(filename)
             data = select_range(ordr, data)
-            ordr = 0 if ordr == "1" else -1
             not_mixed(ordr, data)
         leave("You're finished")
 
