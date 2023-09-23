@@ -6,7 +6,7 @@ import time
 import random
 
 def import_data(filename, row):
-    folder_path = r"C:\Users\AND1\Documents\Private_Code\Learnpy\Data"
+    folder_path = r"yourFilepath"
     data = list(pd.read_excel(os.path.join(folder_path,filename))[row])
     data = [x.lower() for x in data if type(x) == str]
     return data
