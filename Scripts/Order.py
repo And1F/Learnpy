@@ -5,7 +5,7 @@ import sys
 import time
 
 def import_data(filename):
-    folder_path = r"C:\Users\AND1\Documents\Private_Code\Learnpy\Data"
+    folder_path = r"yourFilepath"
     data = list(pd.read_excel(os.path.join(folder_path,filename))["Order"])
     data = [x.lower() for x in data]
     return data
